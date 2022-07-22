@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+div img {
+    display: block;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    max-width: 992px;
+    margin: auto;
+    width: 100%;
+    min-width: 320px;
+}
+
+.header {
+    background-color: #122A57;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+header .list-items {
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu {
+    justify-content: space-between;
+}
+
+.list-items li a {
+    color: #fff;
+}
+
+.item {
+    display: flex;
+}
+
+.apresentacao {
+    height: 75vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .texto-apresentacao {
+    min-height: 200px;
+}
+
+.texto-apresentacao h1 {
+    color: #122A57;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    color: white;
+    background-color: #122A57;
+    text-align: center;
+    border-radius: 30px;
+    width: 220px;
+    display: block;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#quem-somos {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quem-somos h2 {
+    font-size: 32px;
+    color: #122A57;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#quem-somos h2::before {
+    content: "";
+    height: 40px;
+    width: 5px;
+    margin-right: 5px;
+    background-color: #122a57;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#quem-somos p {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#quem-somos img {
+    min-width: 470px;
+}
+
+.container-externo {
+    background-color: #122a57;
+    width: 100%;
+}
+
+#serviços {
+    flex-direction: column;
+    padding: 50px 0 80px 0;
+}
+
+#serviços h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.lista-serviços {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-serviços .item-serviço {
+    text-align: center;
+}
+
+.item-serviço a {
+    width: 220px;
+    background-color: white;
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    margin-top: 30px;
+    color: #122a57;
+    padding: 10px 15px;
+    font-weight: bolder;
+}
+
+.item-serviço p {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.item-serviço img {
+    width: 80%;
+    margin: auto;
+}
+
+#planos {
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#planos h2 {
+    font-size: 32px;
+    padding-top: 50px;
+}
+
+.list-planos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.item-plano {
+    padding: 10px;
+    flex: 1;
+    border: 5px solid #122a57;
+    margin-right: 20px;
+    max-width: 240px;
+}
+
+.item-plano .btn {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.item-plano h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-plano h3::after {
+    content: "";
+    background-color: #122A57;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 80%;
+    height: 2px;
+    background-color: #122a57;
+}
+
+.item-plano ul {
+    margin-bottom: 10px;
+    margin-left: 30px;
+    list-style: disc;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 70px;
+    background-color: #122a57;
+    display: flex;
+    align-items: center;
+}
+
+footer .flex-container {
+    justify-content: space-between;
+    color: white;
+}
+
+
+/*mobile */
+
+@media(max-width: 992px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .apresentação {
+        flex-direction: column-reverse;
+    }
+    .apresentação .texto-apresentação {
+        margin: auto;
+        width: 100%;
+    }
+    #quem-somos {
+        flex-direction: column-reverse;
+    }
+    #quem-somos img {
+        visibility: hidden;
+    }
+    .lista-serviços {
+        flex-direction: column;
+    }
+    .item-serviço img {
+        width: 50%;
+        margin: auto;
+    }
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .list-planos .item-plano {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
